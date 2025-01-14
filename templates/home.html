@@ -15,22 +15,33 @@
     </style>
   </head>
   <body>
+    {%include 'nav.html' %}
     <div >
       <h1 class="text-center mt-2 mb-2">FIZA CAREERS</h1>
     <img class="img-thumbnail" alt="..."src ="static/dragonfly-ave-M9WYRLN26Xs-unsplash.jpg">
     <h2 class="text-center mt-2 mb-2"">About FIZA CAREERS</h2>
+
+<div class = "row" style = "margin-bottom">
+        <div class = "d-none d-md-block col-md-6">
     <p class = "text-center">
       FIZA Careers is a forward-thinking and dynamic organization dedicated to empowering individuals and bridging the gap between aspirations and opportunities. Rooted in a commitment to excellence, FIZA Careers provides comprehensive career solutions, ranging from skill development and professional training to personalized career guidance and recruitment services. By leveraging innovative technologies and a deep understanding of industry trends, the company ensures that clients are equipped with the tools and resources they need to excel in today’s competitive job market. At FIZA Careers, the focus is not just on helping individuals find jobs but on building fulfilling and sustainable careers that align with their passions and strengths. With a vision to redefine career success, FIZA Careers is a trusted partner for growth, transformation, and lifelong learning.
     </p>
+
+      </div>
+        <div class = "col-md-6">
+          <img src = "static/croissant-oUKiDSdTTyg-unsplash.jpg" height = 300px border-radius=3px>"
+        </div>
+        </div>
     <h2 class="text-center">JOB OPENINGS</h2>
       <div>
       {% for job in jobs %}
         {% include 'job_item.html' %}
       {% endfor %}
       <div  class="text-center" >
-    <button class="btn btn-success">CONTACT US</button>
+    <a class="btn btn-success" href = "mailto:hello@fiza.ai?subject=Questions%20about%20Job%20Openings&body=MY%20NAME%3A%20%3Cyour%20name%3E%0D%0AMY%20QUESTION%3A%20%3Cyour%20question%20here%3E">CONTACT US</a>
       </div>
       <p class="text-center mt-4 mb-4" >Copyright 2025 Fiza Careers</p>
     </div>
+      {%include 'footer.html' %}
   </body>
 </html>
